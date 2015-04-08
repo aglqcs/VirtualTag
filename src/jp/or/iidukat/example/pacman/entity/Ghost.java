@@ -7,7 +7,7 @@ import jp.or.iidukat.example.pacman.PacmanGame.GameplayMode;
 import jp.or.iidukat.example.pacman.entity.Playfield.PathElement;
 import android.graphics.Bitmap;
 import android.util.FloatMath;
-
+//TODO: modify to be a chasing player
 public abstract class Ghost extends PlayfieldActor {
 
     public static enum GhostMode {
@@ -372,6 +372,7 @@ public abstract class Ghost extends PlayfieldActor {
     }
     
     // determine the display image of the ghost
+    //TODO: modify to support distributed movement
     @Override
     final int[] getImagePos() {
         int x = 0;
@@ -482,6 +483,8 @@ public abstract class Ghost extends PlayfieldActor {
         }
     }
 
+    //TODO: This should get the chasee's position, but it's also not relevant because
+    // Chasee will be on another node in our p2p network
     @Override
     public final float getFieldX() {
         return PacmanGame.getFieldX(pos[1]);

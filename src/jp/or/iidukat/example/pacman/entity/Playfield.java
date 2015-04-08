@@ -57,6 +57,7 @@ public class Playfield extends BaseEntity {
     //
     // upper left:(5, 1), lower left:(5, 15),
     // upper right:(60, 1), lower right:(60, 15).
+    //TODO: Modify this to create our own levels. I suggest a plain or very simple level to begin
     private static final Path[] PATHS = {
         Path.createHorizontalPath(5, 1, 56),
         Path.createHorizontalPath(5, 4, 5),
